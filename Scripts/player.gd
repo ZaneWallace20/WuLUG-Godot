@@ -9,7 +9,7 @@ extends CharacterBody3D
 @onready var head: Node3D = $Head
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 5.5
 const MOUSE_SENSE = 0.1
 
 
@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	var speed_multiplyer := 1
 	
 	if Input.is_action_pressed("run"):
-		speed_multiplyer = 4
+		speed_multiplyer = 2
 		
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir := Input.get_vector("left", "right", "up", "down")
