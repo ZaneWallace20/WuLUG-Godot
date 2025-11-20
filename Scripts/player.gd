@@ -21,7 +21,7 @@ func  _unhandled_input(event: InputEvent) -> void:
 		# make sure the mouse mode is what we want
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			
-			# must be neg as it grabs reltive positoin from last input
+			# must be neg as it grabs relative position from last input
 			rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENSE))
 			head.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENSE))
 			

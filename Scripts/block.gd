@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	
 	'''
 	
-	delta is the time between frames, this is so that no matter what
+	delta is the time (in seconds) between frames, this is so that no matter what
 	the FPS we can keep the gameplay the same
 	
 	lets say the block needs to move 1 unit 1 second
@@ -27,7 +27,9 @@ func _process(delta: float) -> void:
 	
 	from this we can derive this formula 
 	
-	block speed * delta to let us move correctly
+	block_speed * delta 
+	
+	to let us move correctly
 	
 	'''
 	position.z -= delta * speed
