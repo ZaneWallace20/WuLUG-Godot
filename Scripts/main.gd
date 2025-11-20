@@ -9,7 +9,7 @@ extends Node3D
 @onready var spawn_timer: Timer = $SpawnTimer
 
 # grab the block scene for use later
-var block = load("res://block.tscn").instantiate()
+var block = load("res://Scenes/block.tscn").instantiate()
 
 # 'export' lets us edit this var from the editor
 
