@@ -39,16 +39,16 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	
 	# used for sprint
-	var speed_multiplyer := 1
+	var speed_multiplier := 1
 	
 	if Input.is_action_pressed("run"):
-		speed_multiplyer = 2
+		speed_multiplier = 2
 		
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	
 	# must use vectors to prevent going sqrt(2) * speed when pressing multiple keys
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * speed_multiplyer
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * speed_multiplier
 	
 	if direction:
 		velocity.x = direction.x * SPEED
